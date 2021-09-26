@@ -1,10 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- font-awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="src/css/style.css" />
 </head>
+
 <body>
-<h1>Hello World</h1>
+    <header id="home">
+        <!-- navbar -->
+        <nav id="nav">
+            <div class="nav-center">
+                <!-- nav header -->
+                <div class="nav-header">
+                    <img src="./asset/images/logo.svg" class="logo" alt="logo" />
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <!-- links -->
+                <div class="links-container">
+                    <ul class="links">
+                        <li>
+                            <a href="#home" class="scroll-link">home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="scroll-link">about</a>
+                        </li>
+                        <li>
+                            <a href="#services" class="scroll-link">services</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="scroll-link">contact me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- banner -->
+        <div class="banner">
+            <div class="container">
+                <h1>Software engineer</h1>
+                <i>
+                    “Engineering is a profession that can do the job of almost all other professions.”
+                </i>
+                <div class="header-btn-container">
+                    <a href="#tours" class="scroll-link btn btn-white">explore</a>
+                    <a href="#tours" class="scroll-link btn btn-white">hire me</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- about -->
+    <section id="about" class="section">
+        <div class="title">
+            <h2>about </h2>
+        </div>
+    </section>
+    <!-- services -->
+    <section id="services" class="section">
+        <div class="title">
+            <h2>services</h2>
+        </div>
+        <div class="services">
+            <div class="service-item">
+                <img src="./asset/images/content-image.svg" alt="content-image">
+                <h4>content management</h4>
+                <p>I build contents for sites i develop.
+                    Being the web developer, I work together with clients to create
+                    appealling contents.</p>
+            </div>
+            <div class="service-item">
+                <img src="./asset//images/backend-logo.svg" alt="backend-logo">
+                <h4>backend developement</h4>
+                <p>I build contents for sites i develop.
+                     Being the web developer, I work together with clients to create
+                    appealling contents.</p>
+            </div>
+            <div class="service-item">
+                <img src="./asset//images/frontend-logo.svg" alt="frontend-logo">
+                <h4>frontend development</h4>
+                <p>I build contents for sites i develop.
+                     Being the web developer, I work together with clients to create
+                    appealling contents.</p>
+            </div>
+            <div class="service-item">
+                <img src="./asset//images/frontend-logo.svg" alt="frontend-logo">
+                <h4>search engineer optimization</h4>
+                <p>I build contents for sites i develop.
+                     Being the web developer, I work together with clients to create
+                    appealling contents.</p>
+            </div>
+        </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="section">
+        <div class="title">
+            <h2>contact <span>me</span></h2>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="section">
+        <p>
+            copyright &copy; backroads travel tours company
+            <span id="date"></span>. all rights reserved
+        </p>
+    </footer>
+    <a class="scroll-link top-link" href="#home">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script src="src/js/main.js"></script>
 </body>
+
 </html>
