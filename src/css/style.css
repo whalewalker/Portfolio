@@ -42,7 +42,7 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-secondary: rgb(26, 29, 29);
+  --clr-secondary: rgb(145, 148, 148);
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
@@ -352,14 +352,14 @@ header {
   color: var(--clr-white);
 }
 .title span {
-  color: var(--clr-secondary);
+  color: #0d75ff;
 }
 #about,
 #services,
-#contact {
+#contact, #project {
   padding: 3rem 0 2rem;
 }
-#services {
+#services, #contact {
   background: rgba(13, 13, 13, 1);
 }
 footer {
@@ -379,7 +379,7 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-secondary);
+  background: #0d75ff;
   width: 2rem;
   height: 2rem;
   display: grid;
@@ -624,16 +624,54 @@ form button {
 .skill-container .skill{
   text-align: center;
   color: white;
-  background: var(--clr-grey-7);
+  background: black;
   padding: 0.5rem 1rem;
 }
 
 .skill-progress{
   height: 40px;
-  background-color: var(--clr-primary-5);
+  background-color:#0d75ff;
   text-align: center;
   font-weight: bold;
   display: grid;
   place-items: center;
   color: white;
+}
+
+/* Project */
+.projects{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-item{
+  background-color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  width: 300px;
+  /* height: 350px; */
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.project-item img{
+  height: 280px;
+  object-fit: cover;
+}
+
+.project-item h4{
+  color: white;
+  line-height: 2;
+  text-transform: uppercase;
+}
+.project-item a{
+  color: rgba(7, 31, 63, 0.863);
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: block;
+  background-color: var(--clr-grey-7);
+  padding: 0.3rem;
 }

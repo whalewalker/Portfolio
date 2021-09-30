@@ -42,7 +42,6 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
 
     topLink.classList.add("show-link");
   } else {
@@ -236,3 +235,40 @@ for (let index = 0; index < skillDocument.length; index++) {
   const element = skillDocument[index];
   element.style.width = `${skills[index].performance}%`
 }
+
+const form = document.querySelector(".form");
+const emailInput = document.querySelector(".email");
+const fullName = document.querySelector(".name");
+const message = document.querySelector(".message");
+
+function trim(x) {
+  return x.replace(/^\s+|\s+$/gm,'');
+}
+
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log(emailInput.value)
+  if (trim(emailInput.value).length == 0 && trim(fullName.value).length == 0) {
+    alert("Email or Full name cannot be blank")
+  }
+  if (message.value.trim().length == 0) {
+    alert("Please write something in the message section");
+  } else {
+    let formData = new FormData();
+    console.log(formData)
+
+    formData.append('service_id', 'service_zozr019');
+    formData.append('template_id', 'template_oe141wq');
+    formData.append('user_id', 'user_mmydYoH3id1SB7HG5vhIi');
+
+
+   const response = axios.post("https://api.emailjs.com/api/v1.0/email/send-form", formData);
+    response.then(data => {
+      if (data.status === 200) {
+        alert("Message successfully sents")
+      }
+    })
+    .then(err => console.log(err.message))
+  }
+})
